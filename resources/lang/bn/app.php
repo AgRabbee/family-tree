@@ -1,0 +1,45 @@
+<?php
+
+return [
+    // Labels
+    'my_profile'                     => 'আমার প্রোফাইল',
+    'search'                         => 'অনুসন্ধান',
+    'unknown'                        => 'অজানা',
+    'male'                           => 'পুরুষ',
+    'female'                         => 'মহিলা',
+    'male_code'                      => 'পুরুষ',
+    'female_code'                    => 'মহিলা',
+    'family_chart'                   => 'পারিবারিক চার্ট',
+    'family_tree'                    => 'পারিবারিক বৃক্ষ',
+    'child_count'                    => 'সন্তানের সংখ্যা',
+    'grand_child_count'              => 'নাতি-নাতনির সংখ্যা',
+    'user_found'                     => '<strong>:total</strong> পাওয়া গেছে কীওয়ার্ড : <strong>:keyword</strong> সহ',
+    'search_your_family'             => 'আপনার পরিবার খুঁজুন',
+    'search_your_family_placeholder' => 'নাম/ডাকনাম লিখুন... অনুসন্ধানে ক্লিক করুন',
+    'example'                        => 'যেমন:',
+    'address'                        => 'ঠিকানা',
+    'contact'                        => 'যোগাযোগ',
+    'city'                           => 'শহর',
+    'phone'                          => 'ফোন',
+    'login_account'                  => 'লগইন অ্যাকাউন্ট',
+    'childs_were_not_recorded'       => 'সন্তানদের রেকর্ড করা হয়নি।',
+
+    // Actions
+    'edit'                           => 'সম্পাদনা',
+    'update'                         => 'আপডেট',
+    'show_profile'                   => 'প্রোফাইল দেখুন',
+    'show_family_chart'              => 'পারিবারিক চার্ট দেখুন',
+    'show_family_tree'               => 'পারিবারিক বৃক্ষ দেখুন',
+    'show_marriages'                 => 'বিবাহ দেখুন',
+    'enter_new_name'                 => 'নতুন নাম লিখুন...',
+    'select_from_existing_males'     => 'বর্তমান পুরুষদের থেকে নির্বাচন করুন',
+    'select_from_existing_females'   => 'বর্তমান মহিলাদের থেকে নির্বাচন করুন',
+    'select_from_existing_couples'   => 'বর্তমান দম্পতিদের থেকে নির্বাচন করুন',
+    'restore'                        => 'পুনরুদ্ধার',
+    'download'                       => 'ডাউনলোড',
+    'delete'                         => 'মুছুন',
+    'cancel'                         => 'বাতিল করুন',
+
+    'open_in_google_map' => 'গুগল ম্যাপে খুলুন',
+    'data_not_available' => 'তথ্য উপলব্ধ নয়।',
+];
