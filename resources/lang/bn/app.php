@@ -11,6 +11,8 @@ return [
     'female_code'                    => 'মহিলা',
     'family_chart'                   => 'পারিবারিক চার্ট',
     'family_tree'                    => 'পারিবারিক বৃক্ষ',
+    'wife_count'                     => 'স্ত্রীর সংখ্যা',
+    'husband_count'                  => 'স্বামীর সংখ্যা',
     'child_count'                    => 'সন্তানের সংখ্যা',
     'grand_child_count'              => 'নাতি-নাতনির সংখ্যা',
     'user_found'                     => '<strong>:total</strong> পাওয়া গেছে কীওয়ার্ড : <strong>:keyword</strong> সহ',

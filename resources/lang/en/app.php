@@ -11,6 +11,8 @@ return [
     'female_code'       => 'F',
     'family_chart'      => 'Family Chart',
     'family_tree'       => 'Family Tree',
+    'wife_count'        => 'Wife Count',
+    'husband_count'     => 'Husband Count',
     'child_count'       => 'Child Count',
     'grand_child_count' => 'Grand Child Count',
     'user_found'        => '<strong>:total</strong> found with keyword : <strong>:keyword</strong>',
