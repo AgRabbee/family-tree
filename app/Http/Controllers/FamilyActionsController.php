@@ -146,6 +146,19 @@ class FamilyActionsController extends Controller
 
         $user->addWife($wife, $request->get('marriage_date'));
 
+        return redirect()->to(url()->previous() ? strtok(url()->previous(), '?') : '/');
+    }
+
+    public function deleteWife(Request $request, User $user)
+    {
+        $this->validate($request, [
+            'delete_wife_id' => 'required',
+        ]);
+
+        $wife = User::findOrFail($request->get('delete_wife_id'));
+
+        $user->deleteWife($wife);
+
         return back();
     }
 
@@ -176,6 +189,19 @@ class FamilyActionsController extends Controller
         }
 
         $user->addHusband($husband, $request->get('marriage_date'));
+
+        return redirect()->to(url()->previous() ? strtok(url()->previous(), '?') : '/');
+    }
+
+    public function deleteHusband(Request $request, User $user)
+    {
+        $this->validate($request, [
+            'delete_husband_id' => 'required',
+        ]);
+
+        $husband = User::findOrFail($request->get('delete_husband_id'));
+
+        $user->deleteHusband($husband);
 
         return back();
     }

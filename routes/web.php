@@ -37,7 +37,9 @@ Route::middleware('auth')->group(function () {
         Route::post('family-actions/{user}/set-mother', 'setMother')->name('family-actions.set-mother');
         Route::post('family-actions/{user}/add-child', 'addChild')->name('family-actions.add-child');
         Route::post('family-actions/{user}/add-wife', 'addWife')->name('family-actions.add-wife');
+        Route::post('family-actions/{user}/delete-wife', 'deleteWife')->name('family-actions.delete-wife');
         Route::post('family-actions/{user}/add-husband', 'addHusband')->name('family-actions.add-husband');
+        Route::post('family-actions/{user}/delete-husband', 'deleteHusband')->name('family-actions.delete-husband');
         Route::post('family-actions/{user}/set-parent', 'setParent')->name('family-actions.set-parent');
     });
 
@@ -51,6 +53,7 @@ Route::middleware('auth')->group(function () {
         Route::get('users/{user}/death', 'death')->name('users.death');
         Route::patch('users/{user}/photo-upload', 'photoUpload')->name('users.photo-upload');
         Route::delete('users/{user}', 'destroy')->name('users.destroy');
+        Route::get('users/{user}/tree/export', 'export')->name('users.tree.export');
     });
 
     Route::get('users/{user}/marriages', [UserMarriagesController::class, 'index'])->name('users.marriages');

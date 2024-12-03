@@ -96,7 +96,12 @@
                     @if ($user->wifes->isEmpty() == false)
                         <ul class="list-unstyled">
                             @foreach($user->wifes as $wife)
-                            <li>{{ $wife->profileLink() }}</li>
+                            <li>
+                                {{ Form::open(['route' => ['family-actions.delete-wife',$user->id]]) }}
+                                {{ Form::hidden('delete_wife_id', $wife->id) }}
+                                {{ $wife->profileLink()}} {{Form::submit(__('app.remove'), ['class' => 'btn btn-danger btn-sm', 'id' => 'remove_wife_button'])}}
+                                {{ Form::close() }}
+                            </li>
                             @endforeach
                         </ul>
                     @endif
@@ -137,7 +142,12 @@
                     @if ($user->husbands->isEmpty() == false)
                         <ul class="list-unstyled">
                             @foreach($user->husbands as $husband)
-                            <li>{{ $husband->profileLink() }}</li>
+                            <li>
+                                {{ Form::open(['route' => ['family-actions.delete-husband',$user->id]]) }}
+                                {{ Form::hidden('delete_husband_id', $husband->id) }}
+                                {{ $husband->profileLink()}} {{Form::submit(__('app.remove'), ['class' => 'btn btn-danger btn-sm', 'id' => 'remove_husband_button'])}}
+                                {{ Form::close() }}
+                            </li>
                             @endforeach
                         </ul>
                     @endif

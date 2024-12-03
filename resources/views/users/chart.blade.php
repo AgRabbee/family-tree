@@ -35,22 +35,24 @@
                 <td class="text-center lead" colspan="4">
                     <strong>{{ $user->profileLink('chart') }} ({{ $user->gender }})</strong>
 
+                    @if ($user->wifes->isEmpty() == false || $user->husbands->isEmpty() == false)
                     <p><strong>Spouse:</strong>
                         @if($user->gender == "M")
                             @if ($user->wifes->isEmpty() == false)
                                 @foreach($user->wifes as $wife)
-                                    <span>{{ $wife->profileLink() }}</span>
+                                    <span>{{ $wife->profileLink('chart') }}</span>
                                 @endforeach
                             @endif
                         @endif
                         @if($user->gender == "F")
                             @if ($user->husbands->isEmpty() == false)
                                 @foreach($user->husbands as $husband)
-                                    <span>{{ $husband->profileLink() }}</span>
+                                    <span>{{ $husband->profileLink('chart') }}</span>
                                 @endforeach
                             @endif
                         @endif
                     </p>
+                    @endif
                 </td>
             </tr>
             <tr>

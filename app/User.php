@@ -65,8 +65,6 @@ class User extends Authenticatable
         'husbands.pivot.id' => 'string',
     ];
 
-    // protected $keyType = 'string';
-
     public function getGenderAttribute()
     {
         return $this->gender_id == 1 ? trans('app.male_code') : trans('app.female_code');
@@ -161,6 +159,15 @@ class User extends Authenticatable
         return false;
     }
 
+    public function deleteWife(User $wife)
+    {
+        if ($this->gender_id == 1 && $this->hasBeenMarriedTo($wife)) {
+            $this->wifes()->detach($wife->id);
+            return true;
+        }
+        return false;
+    }
+
     public function husbands()
     {
         return $this->belongsToMany(User::class, 'couples', 'wife_id', 'husband_id')->using('App\CouplePivot')->withPivot(['id'])->withTimestamps()->orderBy('marriage_date');
@@ -177,6 +184,15 @@ class User extends Authenticatable
             return $husband;
         }
 
+        return false;
+    }
+
+    public function deleteHusband(User $husband)
+    {
+        if ($this->gender_id == 2 && $this->hasBeenMarriedTo($husband)) {
+            $this->husbands()->detach($husband->id);
+            return true;
+        }
         return false;
     }
 

@@ -29,6 +29,7 @@ return [
     // Actions
     'edit'                           => 'সম্পাদনা',
     'update'                         => 'আপডেট',
+    'remove'                         => 'X',
     'show_profile'                   => 'প্রোফাইল দেখুন',
     'show_family_chart'              => 'পারিবারিক চার্ট দেখুন',
     'show_family_tree'               => 'পারিবারিক বৃক্ষ দেখুন',

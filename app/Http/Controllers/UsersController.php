@@ -232,7 +232,7 @@ class UsersController extends Controller
      */
     private function getPersonList(int $genderId)
     {
-        return User::where('gender_id', $genderId)->pluck('nickname', 'id');
+        return User::where('gender_id', $genderId)->pluck('name', 'id');
     }
 
     /**
@@ -282,5 +282,14 @@ class UsersController extends Controller
             $userMeta->value = $userAttributes->get($key);
             $userMeta->save();
         }
+    }
+
+    public function export(User $user)
+    {
+        $html = strval(view('users.user-tree-export', compact('user')));
+        header("Content-type: image/png");
+        header("Content-Disposition: attachment; filename=family-tree.png");
+
+        return response()->download($html);
     }
 }

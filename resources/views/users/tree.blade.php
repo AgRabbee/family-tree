@@ -12,6 +12,10 @@
     $ggccTotal = 0;
     $udhegTotal = 0;
     ?>
+
+{{--    {{ link_to_route('users.tree.export', 'Download', [$user->id], ['class' => 'btn btn-info']) }}--}}
+
+
     <div id="wrapper">
         <span class="label">{{ link_to_route('users.tree', !empty($user->yod) ? "Late ".$user->name : $user->name, [$user->id], ['title' => $user->name.' ('.$user->gender.')']) }}</span>
         @if ($spouseCount = $user->couples->count())
